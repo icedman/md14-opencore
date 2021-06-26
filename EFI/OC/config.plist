@@ -18,13 +18,13 @@
 				<key>Comment</key>
 				<string>SSDT-dGPU-Off.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-dGPU-Off.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-HPET.aml</string>
+				<string>IRQ conflict fix</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -44,11 +44,19 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-PNLFCFL.aml</string>
+				<string>backlight fix</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-RMNE.aml</string>
+				<string>SSDT-EXT4-WakeScreen.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>wakescreen fix</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>NullEthernet - required for AppStore access</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -64,7 +72,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-BrightFN.aml</string>
+				<string>backlight keys</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -97,18 +105,26 @@
 			<dict>
 				<key>Comment</key>
 				<string>SSDT-PMC.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-PMC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-SBUS.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-SBUS.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-USBW.aml</string>
 				<key>Enabled</key>
 				<false/>
 				<key>Path</key>
-				<string>SSDT-PMC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-SBUS.aml</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-SBUS.aml</string>
+				<string>SSDT-USBW.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
@@ -407,6 +423,8 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
+				<key>acpi-wake-gpe</key>
+				<data>bQ==</data>
 				<key>acpi-wake-type</key>
 				<data>AQ==</data>
 			</dict>
@@ -965,6 +983,38 @@
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>HibernationFixup.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/HibernationFixup</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>USBWakeFixup.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/USBWakeFixup</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
 		</array>
 		<key>Block</key>
 		<array>
@@ -1412,7 +1462,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v debug=0x100 darkwake=1 keepsyms=1 alcid=21 slide=1 -disablegfxfirmware</string>
+				<string>-v keepsyms=1 alcid=21</string>
 				<key>run-efi-updater</key>
 				<string>No</string>
 				<key>csr-active-config</key>
