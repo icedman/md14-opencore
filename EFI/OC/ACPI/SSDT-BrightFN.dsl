@@ -24,11 +24,19 @@ DefinitionBlock ("", "SSDT", 2, "OCLT", "BrightFN", 0x00000000)
     External (_SB_.PCI0.LPCB.EC0_, DeviceObj)
     External (_SB_.PCI0.LPCB.EC0_.XQ17, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.LPCB.EC0_.XQ18, MethodObj)    // 0 Arguments
+    External (_SB_.PCI0.LPCB.EC0_.XPS0, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
+    
     // External (_SB_.PWRB, DeviceObj)
 
     Scope (_SB.PCI0.LPCB.EC0)
     {
+        Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
+        {
+            Notify (\_SB.LID0, 0x80) // Status Change
+            \_SB.PCI0.LPCB.EC0.XPS0 ()
+        }
+
         Method (_Q18, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             If (_OSI ("Darwin"))
