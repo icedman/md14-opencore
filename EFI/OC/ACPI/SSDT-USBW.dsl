@@ -3,7 +3,7 @@
  */
 DefinitionBlock ("", "SSDT", 2, "OSY86 ", "USBW", 0x00001000)
 {
-    External (\_SB.PCI0.XHC._PRW, MethodObj)
+    // External (\_SB.PCI0.XHC._PRW, MethodObj)
     External (_SB_.LID0, DeviceObj)
     External (_SB_.PWRB, DeviceObj)
     External (_SB_.LID0, DeviceObj)
@@ -18,7 +18,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "USBW", 0x00001000)
 
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
-                Return (\_SB.PCI0.XHC._PRW ()) // Replace with path to your USB device
+                // Return (\_SB.PCI0.XHC._PRW ()) // Replace with path to your USB device
                 Notify (\_SB.LID0, 0x80) // Status Change
                 Notify (\_SB.PWRB, 0x02) // Device Wake
             }
