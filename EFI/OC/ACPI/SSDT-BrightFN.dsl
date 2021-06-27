@@ -21,28 +21,15 @@
 DefinitionBlock ("", "SSDT", 2, "OCLT", "BrightFN", 0x00000000)
 {
     External (_SB_.LID0, DeviceObj)
-    External (_SB_.PCI0.LPCB, DeviceObj)
     External (_SB_.PCI0.LPCB.EC0_, DeviceObj)
     External (_SB_.PCI0.LPCB.EC0_.XQ17, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.LPCB.EC0_.XQ18, MethodObj)    // 0 Arguments
-//    External (_SB_.PCI0.LPCB.EC0_.XQ5E, MethodObj)    // 0 Arguments
-//    External (_SB_.PCI0.LPCB.EC0_.XPS0, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
-//    External (_SB_.PWRB, DeviceObj)
-  
-    /*  
-    Scope(_SB.PCI0.LPCB)
-    {
-        Method(_PWR, 1, NotSerialized)
-        {   
-            Notify (\_SB.LID0, 0x80) // Status Change
-            Notify (\_SB.PWRB, 0x02) // Device Wake
-        }
-    }
-    */
+    External (_SB_.PWRB, DeviceObj)
         
     Scope (_SB.PCI0.LPCB.EC0)
     {
+        
         /*
         Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
         {
