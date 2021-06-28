@@ -1,3 +1,5 @@
 Issues
 * sleep - wakes to dim screen
-* hdmi out - not working
+* hdmi out - not working (fixed with SMBIOS MacbookAir9,1)
+* camera - not working
+* bluetooth firemware - random wait - loop at boot
