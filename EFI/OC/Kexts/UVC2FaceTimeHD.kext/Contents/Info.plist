@@ -56,9 +56,9 @@
 				<string>yes</string>
 			</dict>
 			<key>idProduct</key>
-			<integer>0x1040</integer>
+			<integer>4160</integer>
 			<key>idVendor</key>
-			<integer>0x408</integer>
+			<integer>1032</integer>
 		</dict>
 	</dict>
 	<key>OSBundleRequired</key>
