@@ -114,7 +114,7 @@
 				<key>Comment</key>
 				<string>SSDT-USBW.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-USBW.aml</string>
 			</dict>
@@ -130,7 +130,7 @@
 				<key>Comment</key>
 				<string>SSDT-RMDT.aml</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
 				<string>SSDT-RMDT.aml</string>
 			</dict>
@@ -272,11 +272,37 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>change ADBG to GBDA</string>
+				<string>change SATA0 Ctrlr D0</string>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>Enabled</key>
 				<false/>
+				<key>Find</key>
+				<data>U0FUQTAgQ3RybHIgRDA=</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>U0FUQTAgQ3RybHIgWFg=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change ADBG to GBDA</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
 				<key>Find</key>
 				<data>QURCRw==</data>
 				<key>Limit</key>
@@ -873,7 +899,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/XHCI-unsupported</string>
+				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -889,7 +915,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/USBWakeFixup</string>
 				<key>MaxKernel</key>

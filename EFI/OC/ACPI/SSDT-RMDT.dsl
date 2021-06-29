@@ -1,5 +1,9 @@
 DefinitionBlock ("", "SSDT", 1, "APPLE ", "Debug", 0x00001000)
 {
+    External (_SB_.LID0, DeviceObj)
+    External (_SB_.PWRB, DeviceObj)
+    External (_SB_.PCI0.LPCB.EC0_._PS0, MethodObj)
+    
     Device (RMDT)
     {
         Name (_HID, "RMD0000")
@@ -106,5 +110,19 @@ DefinitionBlock ("", "SSDT", 1, "APPLE ", "Debug", 0x00001000)
             Store(Arg6, Index(TEMP, 6))
             PUSH(TEMP)
         }
+    }
+
+
+    Method (ADBG, 1, NotSerialized)
+    {
+        if (Arg0 == "SATA0 Ctrlr D0")
+        {
+            \_SB_.PCI0.LPCB.EC0_._PS0 ()
+            Notify (\_SB.LID0, 0x80) // Status Change
+            Notify (\_SB.PWRB, 0x02) // Device Wake
+            \RMDT.PUSH ("Got ya!")
+        }
+        
+        \RMDT.PUSH (Arg0)
     }
 }

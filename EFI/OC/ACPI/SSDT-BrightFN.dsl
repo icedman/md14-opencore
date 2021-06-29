@@ -26,19 +26,9 @@ DefinitionBlock ("", "SSDT", 2, "OCLT", "BrightFN", 0x00000000)
     External (_SB_.PCI0.LPCB.EC0_.XQ18, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
     External (_SB_.PWRB, DeviceObj)
-    External (GBDA, MethodObj)    // 1 Arguments
-    External (MBUF, UnknownObj)
     External (RMDT, DeviceObj)
     External (RMDT.P1__, MethodObj)    // 1 Arguments
     External (RMDT.PUSH, MethodObj)    // 1 Arguments
-
-    /*
-    Method (ADBG, 1, NotSerialized)
-    {
-        GBDA (Arg0)
-        \RMDT.PUSH (MBUF)
-    }
-    */
 
     Scope (_SB.PCI0.LPCB.EC0)
     {
