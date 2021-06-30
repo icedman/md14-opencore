@@ -119,10 +119,22 @@ DefinitionBlock ("", "SSDT", 1, "APPLE ", "Debug", 0x00001000)
         {
             \_SB_.PCI0.LPCB.EC0_._PS0 ()
             Notify (\_SB.LID0, 0x80) // Status Change
-            Notify (\_SB.PWRB, 0x02) // Device Wake
+//            Notify (\_SB.PWRB, 0x02) // Device Wake
             \RMDT.PUSH ("Got ya!")
         }
         
         \RMDT.PUSH (Arg0)
     }
+
+
+    /*
+    Method (S0WK, 1, NotSerialized)
+    {
+        \_SB_.PCI0.LPCB.EC0_._PS0 ()
+        Notify (\_SB.LID0, 0x80) // Status Change
+//        Notify (\_SB.PWRB, 0x02) // Device Wake
+        \RMDT.PUSH ("Got ya again!")
+        // \RMDT.PUSH (Arg0)
+    }
+*/
 }

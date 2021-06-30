@@ -38,8 +38,8 @@ DefinitionBlock ("", "SSDT", 2, "OCLT", "BrightFN", 0x00000000)
             {
                 Notify (\_SB.PCI0.LPCB.PS2K, 0x0405)
                 Notify (\_SB.PCI0.LPCB.PS2K, 0x20) // Reserved
-                Notify (\_SB.LID0, 0x80) // Status Change
-                \RMDT.P1 ("Wake--")
+                //Notify (\_SB.LID0, 0x80) // Status Change
+                //\RMDT.P1 ("Wake--")
             }
             Else
             {
@@ -53,8 +53,8 @@ DefinitionBlock ("", "SSDT", 2, "OCLT", "BrightFN", 0x00000000)
             {
                 Notify (\_SB.PCI0.LPCB.PS2K, 0x0406)
                 Notify (\_SB.PCI0.LPCB.PS2K, 0x10) // Reserved
-                Notify (\_SB.LID0, 0x80) // Status Change
-                \RMDT.P1 ("Wake++")
+                //Notify (\_SB.LID0, 0x80) // Status Change
+                //\RMDT.P1 ("Wake++")
             }
             Else
             {
