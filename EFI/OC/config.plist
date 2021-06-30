@@ -112,19 +112,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-USBW.aml</string>
+				<string>SSDT-UIAC.aml</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
-				<string>SSDT-USBW.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-PTSWAK.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-PTSWAK.aml</string>
+				<string>SSDT-UIAC.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -850,24 +842,6 @@
 				<string>19.99.99</string>
 				<key>MinKernel</key>
 				<string>19.0.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>USBMap.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
