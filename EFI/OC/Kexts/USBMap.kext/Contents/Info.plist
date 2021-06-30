@@ -43,35 +43,27 @@
 				<key>kUSBMuxEnabled</key>
 				<true/>
 				<key>port-count</key>
-				<data>
-				DwAAAA==
-				</data>
+				<data>DwAAAA==</data>
 				<key>ports</key>
 				<dict>
 					<key>HS01</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>10</integer>
+						<integer>8</integer>
 						<key>port</key>
-						<data>
-						AQAAAA==
-						</data>
+						<data>AQAAAA==</data>
 					</dict>
 					<key>HS02</key>
 					<dict>
 						<key>UsbConnector</key>
 						<integer>3</integer>
-						<key>port</key>
-						<data>
-						AwAAAA==
-						</data>
+						<key>#port</key>
+						<data>AgAAAA==</data>
 					</dict>
 					<key>HS03</key>
 					<dict>
-						<key>#port</key>
-						<data>
-						BAAAAA==
-						</data>
+						<key>port</key>
+						<data>AwAAAA==</data>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 					</dict>
@@ -79,46 +71,43 @@
 					<dict>
 						<key>UsbConnector</key>
 						<integer>2</integer>
-						<key>port</key>
-						<data>
-						BQAAAA==
-						</data>
+						<key>#port</key>
+						<data>BAAAAA==</data>
 					</dict>
 					<key>HS05</key>
 					<dict>
 						<key>UsbConnector</key>
 						<integer>2</integer>
 						<key>port</key>
-						<data>
-						BgAAAA==
-						</data>
+						<data>BQAAAA==</data>
 					</dict>
 					<key>HS06</key>
 					<dict>
-						<key>#port</key>
-						<data>
-						CgAAAA==
-						</data>
+						<key>port</key>
+						<data>BgAAAA==</data>
+						<key>UsbConnector</key>
+						<integer>255</integer>
+					</dict>
+					<key>HS10</key>
+					<dict>
+						<key>port</key>
+						<data>CgAAAA==</data>
 						<key>UsbConnector</key>
 						<integer>255</integer>
 					</dict>
 					<key>SS01</key>
 					<dict>
 						<key>#port</key>
-						<data>
-						DQAAAA==
-						</data>
+						<data>DQAAAA==</data>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 					</dict>
-					<key>SS02</key>
+					<key>SS03</key>
 					<dict>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
-						<data>
-						DwAAAA==
-						</data>
+						<data>DwAAAA==</data>
 					</dict>
 				</dict>
 			</dict>

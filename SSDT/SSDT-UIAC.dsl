@@ -9,6 +9,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "UIAC", 0)
 HS03 > usb2 (left) (3)
 SS03 > usb3 (left) (3)
 HS05 > usb2 (right) (2)
+HS06 > camera usb2 (internal) (255)
 HS01 > type-C - usb2 (8)
 */
 
@@ -19,7 +20,7 @@ HS01 > type-C - usb2 (8)
         // override EH01 configuration to have only one port
         Name(RMCF, Package()
         {
-            "XHC", Package()
+            "8086_2ed", Package()
             {
                 "port-count", Buffer() { 0x0e, 0, 0, 0 },
                 "ports", Package()
@@ -44,6 +45,12 @@ HS01 > type-C - usb2 (8)
                         "UsbConnector", 255,
                         "port", Buffer() { 0x06, 0, 0, 0 },
                     },
+                    "HS10", Package()
+                    {
+                        "UsbConnector", 255,
+                        "port", Buffer() { 0x0a, 0, 0, 0 },
+                    },
+                        
                     "SS03", Package()
                     {
                         "UsbConnector", 3,

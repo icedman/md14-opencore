@@ -118,9 +118,9 @@ DefinitionBlock ("", "SSDT", 1, "APPLE ", "Debug", 0x00001000)
         if (Arg0 == "SATA0 Ctrlr D0")
         {
             \_SB_.PCI0.LPCB.EC0_._PS0 ()
-            Notify (\_SB.LID0, 0x80) // Status Change
+//            Notify (\_SB.LID0, 0x80) // Status Change
 //            Notify (\_SB.PWRB, 0x02) // Device Wake
-            \RMDT.PUSH ("Got ya!")
+//            \RMDT.PUSH ("Got ya!")
         }
         
         \RMDT.PUSH (Arg0)
