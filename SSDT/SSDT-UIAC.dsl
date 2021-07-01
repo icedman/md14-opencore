@@ -22,7 +22,7 @@ HS01 > type-C - usb2 (8)
         {
             "8086_2ed", Package()
             {
-                "port-count", Buffer() { 0x0e, 0, 0, 0 },
+                "port-count", Buffer() { 0x0f, 0, 0, 0 },
                 "ports", Package()
                 {
                     "HS01", Package()
