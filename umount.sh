@@ -1,4 +1,4 @@
 #!/bin/sh
 
 set +x
-diskutil umount EFI
+diskutil umount EFI-OSX
