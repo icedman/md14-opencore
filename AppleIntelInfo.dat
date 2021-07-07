@@ -1,0 +1,161 @@
+
+AppleIntelInfo.kext v1.6 Copyright © 2012-2016 Pike R. Alpha. All rights reserved
+
+Settings:
+------------------------------------
+logMSRs............................: 1
+logIGPU............................: 1
+logCStates.........................: 1
+logIPGStyle........................: 1
+InitialTSC.........................: 0x1ead88f886 (6 MHz)
+MWAIT C-States.....................: 286531872
+
+Model Specific Registers (MSRs)
+---------------------------------------
+
+MSR_CORE_THREAD_COUNT..........(0x35)  : 0x40008
+----------------------------------------
+ - Core Count......................... : 4
+ - Thread Count....................... : 8
+
+MSR_PLATFORM_INFO..............(0xCE)  : 0x4043DF1011500
+----------------------------------------
+ - Maximum Non-Turbo Ratio............ : 21
+ - Ratio Limit for Turbo Mode......... : 1 (programmable)
+ - TDP Limit for Turbo Mode........... : 1 (programmable)
+ - Low Power Mode Support............. : 1 (LPM supported)
+ - Number of ConfigTDP Levels......... : 2 (additional TDP level(s) available)
+ - Maximum Efficiency Ratio........... : 4
+ - Minimum Operating Ratio............ : 4
+
+MSR_PMG_CST_CONFIG_CONTROL.....(0xE2)  : 0x7E000008
+----------------------------------------
+ - I/O MWAIT Redirection Enable....... : 0 (not enabled)
+ - CFG Lock........................... : 0 (MSR not locked)
+ - C3 State Auto Demotion............. : 1 (enabled)
+ - C1 State Auto Demotion............. : 1 (enabled)
+ - C3 State Undemotion................ : 1 (enabled)
+ - C1 State Undemotion................ : 1 (enabled)
+ - Package C-State Auto Demotion...... : 1 (enabled)
+ - Package C-State Undemotion......... : 1 (enabled)
+
+MSR_PMG_IO_CAPTURE_BASE........(0xE4)  : 0x51814
+----------------------------------------
+ - LVL_2 Base Address................. : 0x1814
+ - C-state Range...................... : 5 (C-States not included, I/O MWAIT redirection not enabled)
+
+IA32_MPERF.....................(0xE7)  : 0xFAF784DBD
+IA32_APERF.....................(0xE8)  : 0xB44252D72
+
+MSR_FLEX_RATIO.................(0x194) : 0x110000
+----------------------------------------
+
+MSR_IA32_PERF_STATUS...........(0x198) : 0x205B00002400
+----------------------------------------
+ - Current Performance State Value.... : 0x2400
+
+MSR_IA32_PERF_CONTROL..........(0x199) : 0xA00
+----------------------------------------
+ - Target performance State Value..... : 0xA00
+ - Intel Dynamic Acceleration......... : 0 (IDA engaged)
+
+IA32_CLOCK_MODULATION..........(0x19A) : 0x0
+IA32_THERM_STATUS..............(0x19C) : 0x881F0800
+
+IA32_MISC_ENABLES..............(0x1A0) : 0x850089
+----------------------------------------
+ - Fast-Strings....................... : 1 (enabled)
+ - Automatic Thermal Control Circuit.. : 1 (enabled)
+ - Performance Monitoring............. : 1 (available)
+ - Enhanced Intel SpeedStep Technology : 1 (enabled)
+
+MSR_MISC_PWR_MGMT..............(0x1AA) : 0x401CC1
+----------------------------------------
+ - EIST Hardware Coordination......... : 1 (disabled)
+
+MSR_TURBO_RATIO_LIMIT..........(0x1AD) : 0x2727292A
+----------------------------------------
+ - Maximum Ratio Limit for C01........ : 42 
+ - Maximum Ratio Limit for C02........ : 41 
+ - Maximum Ratio Limit for C03........ : 39 
+ - Maximum Ratio Limit for C04........ : 39 
+
+IA32_ENERGY_PERF_BIAS..........(0x1B0) : 0x7
+----------------------------------------
+
+MSR_POWER_CTL..................(0x1FC) : 0x34005F
+MSR_RAPL_POWER_UNIT............(0x606) : 0xA0E03
+MSR_PKG_POWER_LIMIT............(0x610) : 0x42819800DD80C8
+MSR_PKG_ENERGY_STATUS..........(0x611) : 0x140B330
+MSR_PKG_POWER_INFO.............(0x614) : 0x78
+MSR_PP0_POWER_LIMIT............(0x638) : 0x0
+MSR_PP0_ENERGY_STATUS..........(0x639) : 0x1263202
+MSR_TURBO_ACTIVATION_RATIO.....(0x64C) : 0x0
+MSR_PKGC6_IRTL.................(0x60b) : 0x8876
+MSR_PKG_C2_RESIDENCY...........(0x60d) : 0xB39B8DDD
+MSR_PKG_C3_RESIDENCY...........(0x3f8) : 0x907308
+MSR_PKG_C6_RESIDENCY...........(0x3f9) : 0x27C0255
+IA32_TSC_DEADLINE..............(0x6E0) : 0x1EB0185646
+
+IA32_PM_ENABLE.................(0x770) : 0x0 (HWP Enabled)
+
+IA32_HWP_CAPABILITIES..........(0x771) : 0x10D102A
+----------------------------------------
+ - Highest Performance................ : 42
+ - Guaranteed Performance............. : 16
+ - Most Efficient Performance......... : 13
+ - Lowest Performance................. : 1
+
+IA32_HWP_INTERRUPT.............(0x773) : 0x1
+----------------------------------------
+ - Guaranteed Performance Change...... : 1 (Interrupt generated on change of)
+ - Excursion Minimum.................. : 0 (Interrupt generation disabled)
+
+IA32_HWP_REQUEST...............(0x774) : 0x802A2A04
+----------------------------------------
+ - Minimum Performance................ : 4
+ - Maximum Performance................ : 42
+ - Desired Performance................ : 42
+ - Energy Efficient Performance....... : 128
+ - Activity Window.................... : 0, 0
+ - Package Control.................... : 0
+
+IA32_HWP_STATUS................(0x777) : 0x0
+----------------------------------------
+ - Guaranteed Performance Change...... : 0 (has not occured)
+ - Excursion To Minimum............... : 0 (has not occured)
+
+CPU Ratio Info:
+----------------------------------------
+CPU Maximum Efficiency Ratio...........:  400 MHz
+CPU Maximum non-Turbo Frequency........: 2100 MHz
+CPU Maximum Turbo Frequency............: 4200 MHz
+
+IGPU Info:
+----------------------------------------
+IGPU Current Frequency.................:    0 MHz
+IGPU Minimum Frequency.................:  300 MHz
+IGPU Maximum Non-Turbo Frequency.......:  300 MHz
+IGPU Maximum Turbo Frequency...........: 1100 MHz
+IGPU Maximum limit.....................: No Limit
+
+CPU P-States [ (8) 28 39 ] iGPU P-States [ ]
+CPU C3-Cores [ 3 4 5 6 7 ]
+CPU P-States [ (8) 27 28 39 ] iGPU P-States [ ]
+CPU C3-Cores [ 2 3 4 5 6 7 ]
+CPU P-States [ 8 (12) 27 28 39 ] iGPU P-States [ ]
+CPU P-States [ (8) 12 27 28 29 39 ] iGPU P-States [ ]
+CPU C3-Cores [ 0 1 2 3 4 5 6 7 ]
+CPU P-States [ 8 12 (18) 27 28 29 39 ] iGPU P-States [ (18) ]
+CPU P-States [ (8) 12 18 27 28 29 30 39 ] iGPU P-States [ 18 ]
+CPU P-States [ 8 12 18 27 28 29 30 (36) 39 ] iGPU P-States [ 18 ]
+CPU P-States [ 8 12 (14) 18 27 28 29 30 36 39 ] iGPU P-States [ 18 ]
+CPU P-States [ 8 12 14 18 (24) 27 28 29 30 36 39 ] iGPU P-States [ (18) ]
+CPU P-States [ 8 12 14 18 24 27 28 29 30 (34) 36 39 ] iGPU P-States [ (18) ]
+CPU P-States [ 8 12 14 18 24 27 28 29 30 34 36 (39) ] iGPU P-States [ 18 ]
+CPU P-States [ 8 12 14 18 24 27 28 29 30 34 36 39 (41) ] iGPU P-States [ 18 ]
+CPU P-States [ 8 12 14 18 24 27 28 29 30 (33) 34 36 39 41 ] iGPU P-States [ (18) ]
+CPU P-States [ (8) 12 14 18 24 27 28 29 30 33 34 36 39 41 ] iGPU P-States [ 18 (24) ]
+CPU P-States [ (8) 12 14 18 24 27 28 29 30 33 34 36 39 41 ] iGPU P-States [ 2 18 24 ]
+CPU P-States [ (8) 12 14 18 24 27 28 29 30 33 34 36 39 41 ] iGPU P-States [ 2 18 24 ]
+CPU P-States [ (8) 12 14 18 24 27 28 29 30 33 34 36 39 41 ] iGPU P-States [ 2 18 24 (27) ]

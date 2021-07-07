@@ -1,0 +1,4 @@
+#!/bin/sh
+
+/usr/sbin/networksetup -setairportpower Wi-Fi on
+echo `date` `'waking... power-up wifi...' >> /tmp/sleep.log
