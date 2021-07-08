@@ -1,4 +1,5 @@
 #!/bin/sh
 
-/usr/sbin/networksetup -setairportpower Wi-Fi off
+# /usr/sbin/networksetup -setairportpower Wi-Fi off
+/usr/sbin/networksetup -setnetworkserviceenabled Wi-Fi off
 echo `date` 'sleeping... shutdown wifi...' >> /tmp/sleep.log
